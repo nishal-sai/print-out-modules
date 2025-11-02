@@ -1,6 +1,23 @@
 <html>
     <head><title>prints</title></head>
     <body>
+        <script>
+document.addEventListener('keydown', function(e) {
+  // Block Print Screen
+  if (e.key === 'PrintScreen') {
+    alert('Screenshots are disabled on this site.');
+    e.preventDefault();
+  }
+
+  // Block Ctrl+S, Ctrl+U, F12 (view source / dev tools)
+  if (e.ctrlKey && ['s', 'u'].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+  }
+  if (e.key === 'F12') {
+    e.preventDefault();
+  }
+});
+        </script>
         <style>
             body{
                 padding: 10px;
@@ -44,6 +61,7 @@
         </ol>
     </body>
 </html>
+
 
 
 
