@@ -2,6 +2,7 @@
     <head><title>prints</title></head>
     <body>
         <script>
+            getWindow().setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE);
 document.addEventListener('keydown', function(e) {
   // Block Print Screen
   if (e.key === 'PrintScreen') {
@@ -61,6 +62,7 @@ document.addEventListener('keydown', function(e) {
         </ol>
     </body>
 </html>
+
 
 
 
